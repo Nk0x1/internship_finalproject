@@ -115,7 +115,7 @@ justify-items: center;
   background-color: #ff7b7b; 
   color: white;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   border-radius: 4px;
   text-decoration: none;
   border-radius: 35px;
@@ -124,7 +124,7 @@ justify-items: center;
 .reach-bottom {
   display: block;
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 7px;
   z-index: 99;
   border: none;
@@ -132,11 +132,31 @@ justify-items: center;
   background-color:#ff7b7b; 
   color: white;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   border-radius: 4px;
   text-decoration: none;
   border-radius: 35px;
 }
 .back-to-top:hover, .reach-bottom:hover {
+  background-color: rgb(161, 121, 158);
+}
+
+.go-back {
+  display: block;
+  position: fixed;
+  top: 60px;
+  left: 7px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ff7b7b; 
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 35px;
+}
+.go-back:hover {
   background-color: rgb(161, 121, 158);
 }
