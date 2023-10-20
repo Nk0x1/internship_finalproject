@@ -102,3 +102,41 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(3, 1fr);
 justify-items: center;
 }
+
+
+.back-to-top {
+  display: block;
+  position: fixed;
+  bottom: 60px;
+  right: 7px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ff7b7b; 
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 35px;
+}
+
+.reach-bottom {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 7px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color:#ff7b7b; 
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 35px;
+}
+.back-to-top:hover, .reach-bottom:hover {
+  background-color: rgb(161, 121, 158);
+}

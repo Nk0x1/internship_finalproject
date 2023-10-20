@@ -7,8 +7,9 @@
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5650/5650592.png">
     <title>Buddies</title>
 </head>
-<body>
+<body id="top">
     <h1><br />Wow! You share your birthday with so many people!</h1>
+    <a href="#bottom" class="reach-bottom">V</a>
     <br />
     <div class="card-grid">
         {% for i in details['births']: %}
@@ -29,5 +30,7 @@
             </div>
         {% endfor %}
     </div>
+    <a href="#top" class="back-to-top">Ʌ</a>
+    <a id="bottom"></a>
 </body>
 </html>
