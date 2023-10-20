@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/post.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-  <h1>These are your bday buddies</h1>
- <div>
-    {% for i in details['births']: %}
-    <li>{{i['text']}}</li>
-    {% endfor %}
- </div>
     
+        
+        <h1><br>Wow! You have so many b'day buddies!!</h1><br>
+        <div class="test">
+            {% for i in details['births']: %}
+            <div class="card">
+                <img src="https://media.tenor.com/vp-Ikh8MS_0AAAAi/rafsdesign-rafs.gif" alt="star" width="75" height="75">
+                <p>{{i['text']}}<p>
+            </div>
+            {% endfor %}
+        </div>  
 </body>
 </html>
