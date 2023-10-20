@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/post.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/post.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-        
-        <h1><br>Wow! You have so many b'day buddies!!</h1><br>
-        <div class="test">
-            {% for i in details['births']: %}
-            <div class="card">
-                <img src="https://media.tenor.com/vp-Ikh8MS_0AAAAi/rafsdesign-rafs.gif" alt="star" width="75" height="75">
-                <p>{{i['text']}}<p>
-            </div>
-            {% endfor %}
-        </div>  
-</body>
+  </head>
+  <body>
+    <h1><br />Wow! You have so many b'day buddies!!</h1>
+    <br />
+    <div class="test">
+      {% for i in details['births']: %}
+      <div class="card">
+        {% if 'source' in i['pages'][0]['thumbnail'] %}
+        <script>
+          console.log("{{ i['pages'][0]['thumbnail'].source}}");
+        </script>
+        <img
+          src="{{ i['pages'][0]['thumbnail']['source'] }}"
+          width="150"
+          height="150"
+        />
+
+        {% else %}
+        <img
+          src="https://media.tenor.com/vp-Ikh8MS_0AAAAi/rafsdesign-rafs.gif"
+          alt="star"
+          width="150"
+          height="150"
+        />
+
+        {% endif %}
+
+        <p>{{i['text']}}</p>
+
+            <a href="{{ i['pages'][0].content_urls.desktop.page }}" target="_blank">
+                <button>Learn more</button>
+            </a>
+            
+
+
+        <p></p>
+      </div>
+
+      {% endfor %}
+    </div>
+  </body>
 </html>
