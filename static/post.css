@@ -1,42 +1,97 @@
-body{
-    text-align: center;
-    background-image: url('https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcC00NDgtcGFpLTIwNi5qcGc.jpg');
-    
-    font-family: sans-serif;
-    background-color: #eec0c8;
+body {
+  text-align: center;
+  background-image: url('https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcC00NDgtcGFpLTIwNi5qcGc.jpg2');
+  font-family: 'Arial', sans-serif;
+  background-color: #eec0c8;
+  margin: 0;
+  padding: 0;
 }
+
+h1 {
+  margin-top: 20px;
+}
+
 .test {
   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff8d;
+  padding: 1rem;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.flip-card-back h3 {
+  color: #212121;
+}
+
+.flip-card-back a {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff7b7b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.flip-card-back a:hover {
+  background-color: #ff5555;
 }
 
 
-.card{
-    position: relative;
-    background: #ffe6e6;
-    padding:50px;
-    width: 300px;
-    margin: 20px auto 0 auto;
-    box-shadow: 0 2px 4px rgba(100,100,100,.1);
-    display: flex;
-  }
-.card .text {
-    color:#212121;
-    margin-top:20px;
-    font-size:15px;
-    line-height:22px;
-  }
-
-
-  
-
-
-
-
-
-
-
-
-
-
+.card-grid {
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+justify-items: center;
+}

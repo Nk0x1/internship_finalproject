@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../static/post.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5650/5650592.png">
+    <title>Buddies</title>
+</head>
+<body>
     <h1><br />Wow! You have so many b'day buddies!!</h1>
     <br />
-    <div class="test">
-      {% for i in details['births']: %}
-      <div class="card">
-        {% if 'source' in i['pages'][0]['thumbnail'] %}
-        <img
-          src="{{ i['pages'][0]['thumbnail']['source'] }}"
-          width="150"
-          height="150"
-        />
-
-        {% else %}
-        <img
-          src="https://media.tenor.com/vp-Ikh8MS_0AAAAi/rafsdesign-rafs.gif"
-          alt="star"
-          width="150"
-          height="150"
-        />
-
-        {% endif %}
-
-        <p>{{i['text']}}</p>
-
-        <a href="{{ i['pages'][0].content_urls.desktop.page }}" target="_blank">
-          <button>Learn more</button>
-        </a>
-
-        <p></p>
-      </div>
-
-      {% endfor %}
+    <div class="card-grid">
+        {% for i in details['births']: %}
+            <div class="card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        {% if 'source' in i['pages'][0]['thumbnail'] %}
+                            <img src="{{ i['pages'][0]['thumbnail']['source'] }}" alt="{{i['text']}}" />
+                        {% else %}
+                            <img src="https://media.tenor.com/vp-Ikh8MS_0AAAAi/rafsdesign-rafs.gif" alt="star" />
+                        {% endif %}
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>{{i['text']}}</h3>
+                        <a href="{{ i['pages'][0].content_urls.desktop.page }}" target="_blank">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-  </body>
+</body>
 </html>
