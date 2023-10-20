@@ -13,9 +13,6 @@
       {% for i in details['births']: %}
       <div class="card">
         {% if 'source' in i['pages'][0]['thumbnail'] %}
-        <script>
-          console.log("{{ i['pages'][0]['thumbnail'].source}}");
-        </script>
         <img
           src="{{ i['pages'][0]['thumbnail']['source'] }}"
           width="150"
