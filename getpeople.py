@@ -17,9 +17,12 @@ def enter():
 def result():
     if request.method=="POST":
         data = request.form['dob']
-        response=requests.get(f"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/{data}")
-        details=response.json()
-        return render_template('final.html',details = details) 
+        if not data:
+            return render_template('error.html', error_message="Please enter a valid date.")
+        else:
+            response=requests.get(f"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/{data}")
+            details=response.json()
+            return render_template('final.html',details = details) 
            
             
 
