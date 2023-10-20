@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>BUDDIES</title>
 </head>
 <body>
+    <div class="container">
+        <div class="heading">
+         <h1>Find your bday buddies</h1>
+
+        </div>
         <form action="/result" method="post">
-            <label for="dob">Enter dob:</label>
-            <input type="text" name="dob" placeholder="mm/dd">
-        <button type="submit" value="submit">
-    </form>
+            <label for="dob">Enter your birthday:</label>
+            <input type="text" name="dob" autocomplete="off" placeholder="MM/DD" />
+            <button type="submit" value="submit">Check</button>
+        </form>
+    </div>
 </body>
 </html>
