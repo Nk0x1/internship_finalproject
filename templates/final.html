@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>These are your bday buddies</h1>
+ <div>
+    {% for i in details['births']: %}
+    <li>{{i['text']}}</li>
+    {% endfor %}
+ </div>
+    
+</body>
+</html>
