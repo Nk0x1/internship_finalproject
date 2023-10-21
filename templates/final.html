@@ -16,7 +16,7 @@
     <div class="card-grid">
         {% for i in details['births']: %}
             <div class="card">
-                <div class="flip-card-inner">s
+                <div class="flip-card-inner">
                     <div class="flip-card-front">
                         {% if 'source' in i['pages'][0]['thumbnail'] %}
                             <img src="{{ i['pages'][0]['thumbnail']['source'] }}" alt="{{i['text']}}" />
