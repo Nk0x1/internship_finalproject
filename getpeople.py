@@ -27,7 +27,7 @@ def result():
 
         response = requests.get(f"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/{data}")
         details = response.json()
-        return render_template('final.html', details=details)
+          return render_template('final.html', details=details)
             
 
 if __name__=="__main__":    
