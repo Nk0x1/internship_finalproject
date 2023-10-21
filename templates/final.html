@@ -5,17 +5,18 @@
     <link rel="stylesheet" href="../static/post.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5650/5650592.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Buddies</title>
 </head>
 <body id="top">
     <h1><br />Wow! You share your birthday with so many people!</h1>
-    <a href="/" class="go-back">←</a>
+    <a href="/" id="go-back" class="fa fa-home">HOME</a>
     <a href="#bottom" class="reach-bottom">↓</a>
     <br />
     <div class="card-grid">
         {% for i in details['births']: %}
             <div class="card">
-                <div class="flip-card-inner">
+                <div class="flip-card-inner">s
                     <div class="flip-card-front">
                         {% if 'source' in i['pages'][0]['thumbnail'] %}
                             <img src="{{ i['pages'][0]['thumbnail']['source'] }}" alt="{{i['text']}}" />

@@ -141,11 +141,11 @@ justify-items: center;
   background-color: rgb(161, 121, 158);
 }
 
-.go-back {
+#go-back {
   display: block;
   position: fixed;
   top: 60px;
-  left: 7px;
+  left: 10px;
   z-index: 99;
   border: none;
   outline: none;
@@ -157,6 +157,6 @@ justify-items: center;
   text-decoration: none;
   border-radius: 35px;
 }
-.go-back:hover {
+#go-back:hover {
   background-color: rgb(161, 121, 158);
 }

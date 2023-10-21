@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5650/5650592.png">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Error</title>
     <style>
         body {
@@ -19,9 +19,10 @@
             color: #fa0303;
             
         }
-        .go-back {
+        #go-back {
             text-align: center;
             padding-top: 200px;
+            margin-top: 20px;
             z-index: 99;
             border: none;
              outline: none;
@@ -35,6 +36,7 @@
 }
 .go-back:hover {
   background-color: rgb(161, 121, 158);
+ 
 }
     </style>
 </head>
@@ -42,7 +44,7 @@
 <body>
     <h2> ⚠️ ERROR ⚠️ </h2>
     <p><strong>{{ error_message }}</strong></p>
-    <a href="/" class="go-back">←HOME</a>
+    <a href="/" id="go-back" class="fa fa-home">Home</a>
 </body>
 
 </html>
